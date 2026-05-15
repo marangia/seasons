@@ -414,7 +414,7 @@ footer {
 @media (max-width: 540px) {
   .footer-brand { align-items: flex-start; }
   .copyright { text-align: left; }
-  .logo { width: 130px; }
+  .logo { width: 230px; }
 }
 
 /* ── TOAST ── */
