@@ -1,4 +1,4 @@
-const N8N_WEBHOOK_URL = "https://n8n.therightdot.com/webhook-test/seasons";
+const N8N_WEBHOOK_URL = "https://n8n.therightdot.com/webhook/seasons";
 
 // ── MODALS ──
 function openModal(id) {
