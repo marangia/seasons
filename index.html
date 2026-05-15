@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SeaSons APS</title>
+  <meta name="description" content="SEA SONS APS — Sostienici e resta in contatto con il nostro progetto." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="/logo.png" alt="SeaSons" class="logo" />
+  </header>
+
+  <!-- DONAZIONI -->
+  <section id="donazioni">
+    <h2>Sostienici</h2>
+    <div class="accent-line"></div>
+    <div class="cards">
+
+      <a href="https://paypal.me/SostieniSeaSons" target="_blank" rel="noopener noreferrer" class="card card-link-wrap">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="#003087"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.59 3.025-2.566 6.082-8.558 6.082H9.833l-1.27 8.07h3.396c.458 0 .849-.333.92-.786l.038-.199.731-4.627.047-.254a.932.932 0 0 1 .92-.786h.578c3.746 0 6.678-1.522 7.534-5.922.358-1.84.173-3.376-.505-4.291z"/></svg>
+        </div>
+        <h3>Dona con PayPal</h3>
+        <p>Rapido, sicuro e diretto.</p>
+        <span class="cta">Procedi →</span>
+      </a>
+
+      <button class="card" onclick="openModal('modal-iban')">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M2 11h20v2H2zm0 4h20v2H2zm0-8h20v2H2zM2 3h20v2H2z"/><rect x="3" y="7" width="4" height="12" rx="1"/><rect x="10" y="7" width="4" height="12" rx="1"/><rect x="17" y="7" width="4" height="12" rx="1"/></svg>
+        </div>
+        <h3>Dona tramite Bonifico</h3>
+        <p>Supporto diretto dal tuo conto.</p>
+        <span class="cta">Mostra IBAN →</span>
+      </button>
+
+      <button class="card" onclick="openModal('modal-5x1000')">
+        <div class="card-icon heart-icon">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <h3>Dona il tuo 5×1000</h3>
+        <p>Sostienici senza alcun costo.</p>
+        <span class="cta accent-cta">Scopri come →</span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- MODAL IBAN -->
+  <div id="modal-iban" class="modal" onclick="closeModalOutside(event, 'modal-iban')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-iban')">×</button>
+      <h3>Dona tramite Bonifico</h3>
+      <p class="modal-desc">Utilizza le seguenti coordinate bancarie per effettuare la tua donazione a SEA SONS APS.</p>
+      <div class="detail-box">
+        <div class="detail-row">
+          <span class="detail-label">Intestatario</span>
+          <span class="detail-value">SEASON APS</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">IBAN</span>
+          <div class="copy-row">
+            <span class="detail-value mono">IT86M0321115800052747907430</span>
+            <button class="copy-btn" onclick="copyText('IT86M0321115800052747907430', this)">Copia</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 5x1000 -->
+  <div id="modal-5x1000" class="modal" onclick="closeModalOutside(event, 'modal-5x1000')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-5x1000')">×</button>
+      <h3>Sostienici con il tuo 5×1000!</h3>
+      <p>Devolvere il 5×1000 a <strong>SEA SONS - APS</strong> non ti costa nulla.</p>
+      <div class="detail-box cf-box">
+        <p class="cf-instruction">Nei modelli della dichiarazione dei redditi firma nel riquadro <strong>"Sostegno del Terzo Settore"</strong> e inserisci il nostro Codice Fiscale:</p>
+        <div class="copy-row">
+          <span class="detail-value mono large">90290730733</span>
+          <button class="copy-btn" onclick="copyText('90290730733', this)">Copia Codice</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTATTO -->
+  <section id="contatto">
+    <div class="form-card">
+      <h2>Resta in Contatto</h2>
+      <div class="accent-line"></div>
+      <p class="section-desc">Vuoi restare aggiornato sul progetto? Lasciaci i tuoi dati.</p>
+
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="nome">Nome e Cognome <span class="required">*</span></label>
+          <input type="text" id="nome" name="nome" placeholder="Es. Mario Rossi" required />
+          <span class="field-error" id="err-nome"></span>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Numero di Telefono <span class="optional">(Opzionale)</span></label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Es. +39 333 1234567" inputmode="tel" />
+          <span class="field-error" id="err-telefono"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="mario.rossi@email.it" required />
+          <span class="field-error" id="err-email"></span>
+        </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="privacy" name="privacy" />
+          <label for="privacy">Ho letto e accetto la <a href="#footer-privacy">Privacy Policy</a> indicata in fondo alla pagina.</label>
+        </div>
+        <span class="field-error" id="err-privacy"></span>
+        <button type="submit" class="submit-btn">Invia</button>
+      </form>
+
+      <div id="success-msg" class="hidden">
+        <div class="success-icon">✓</div>
+        <h3>Grazie!</h3>
+        <p>Ti terremo aggiornato sul progetto SeaSons.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer-privacy">
+    <div class="footer-inner">
+      <div class="privacy-col">
+        <h4>Privacy Policy</h4>
+        <p><strong>Titolare del trattamento:</strong> SEA SONS APS</p>
+        <p><strong>Dati raccolti:</strong> Nome, Cognome, Numero di Telefono, Email.</p>
+        <p><strong>Finalità:</strong> Invio di comunicazioni e aggiornamenti relativi al progetto SeaSons.</p>
+        <p><strong>Diritti:</strong> Hai il diritto di accedere, modificare o richiedere la cancellazione dei tuoi dati in qualsiasi momento contattandoci all'indirizzo <a href="mailto:SeaSonsaps@gmail.com">SeaSonsaps@gmail.com</a>.</p>
+        <p>I tuoi dati sono conservati in modo sicuro e non verranno ceduti o venduti a terzi in nessun caso.</p>
+      </div>
+      <div class="footer-brand">
+        <img src="/logo.png" alt="SeaSons" class="footer-logo" />
+        <p class="copyright">© 2025 SEA SONS APS<br/>Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast">Copiato negli appunti!</div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
